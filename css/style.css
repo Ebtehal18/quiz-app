@@ -1,0 +1,113 @@
+main{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/large-triangles.svg);
+    background-position:center center;
+    background-size: cover;
+height: 100vh;
+}
+.title{
+    border-radius: 10px;
+    padding: 6px;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    isolation: isolate;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+    padding: 15px;
+    background-image: linear-gradient(30deg, #eee, #fff);
+    border-radius: 10px;
+
+}
+.title::before{
+    padding: 10px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(2),translate(-50%,-50%) ;
+    scale: (1.1);
+    background-image: conic-gradient(#fc5130, #613dc1);
+    animation: spinner 7s infinite linear;
+    z-index: -1;
+    border-radius: 10px;
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    25% {
+        transform: rotate(45deg);
+    }
+    75% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ul.choices li{
+    font-size: 19px;
+    font-weight: 600;
+    border-radius: 100vh;
+    border: 2px solid #434371;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 10px) / 2);
+    cursor: pointer;
+    color: #434371;
+    transition: all 0.5s;
+
+}
+ul.choices li:hover{
+    background-color: #434371;
+    color: #fff;
+}
+#questions .btn{
+    padding: 6px 12px ;
+    color: #fff;
+}
+#questions .btn-category{
+    background-color: #a1c349;
+}
+#questions .btn-questions{
+    background-color: #38369a;
+}
+#questions h2{
+ 
+    color:rgb(33, 37, 41) ;
+
+}
+#result h2{
+    font-weight: 500;
+}
+#result .again{
+    width: fit-content;
+    margin: auto;
+}
+#questions .correct{
+    background-color: #a1c349;
+    border: 2px solid #a1c349;
+    color: #fff;
+}
+#questions .wrong{
+    border: 2px solid #fc5130;
+    background-color: #fc5130;
+    color: #fff;
+}
+@media screen and (max-width:767px) {
+    ul.choices li{
+        border-radius: 15px;
+    }
+    .btns{
+        gap: 30px;
+    }
+}
